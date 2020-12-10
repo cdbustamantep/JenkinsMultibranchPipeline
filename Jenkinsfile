@@ -6,7 +6,9 @@ pipeline {
 			
 			stage('First') {
 				steps {
-					sh 'echo "prueba"'
+					script {
+						env.VARIABLE="value"
+					 }
 				 }
 			}
 			
