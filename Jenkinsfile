@@ -15,7 +15,9 @@ pipeline {
 
 
 			stage('Second') {
-				when { $EXECUTE == "True" }
+				when { 
+					expresion { $EXECUTE == "True" } 
+				}
 				steps { 
 					sh 'echo "updating second stage"'
 					echo "$EXECUTE"
