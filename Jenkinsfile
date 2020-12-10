@@ -18,7 +18,7 @@ pipeline {
 				steps { 
 					sh 'echo "updating second stage"'
 					script {
-						echo $VARIABLE
+						echo "$VARIABLE"
 					 }
 				}
 			}
