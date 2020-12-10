@@ -10,13 +10,12 @@ pipeline {
 			}
 			
 
-			      
+			when { $EXECUTE=="True"     
 			      stage('Second') {
 					steps { sh 'echo "updating second stage"'
 					}
 				}
-
-			
+			     }			
 				
 			
 			
