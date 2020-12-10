@@ -13,15 +13,16 @@ pipeline {
 			}
 			
 
-		
-			stage('Second') {
-				steps { 
-					sh 'echo "updating second stage"'
-					script {
-						echo "$EXECUTE"
-					 }
+			when { $EXECUTE=="True"
+			     }
+				stage('Second') {
+					steps { 
+						sh 'echo "updating second stage"'
+						script {
+							echo "$EXECUTE"
+						 }
+					}
 				}
-			}
 			     			
 				
 			
