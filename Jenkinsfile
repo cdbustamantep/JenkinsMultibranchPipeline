@@ -1,15 +1,18 @@
 pipeline {
 	agent any
 		stages {
-			stage('One') {
-				steps { sh 'echo "Step Uno"'
+			stage('First') {
+				steps { sh 'env.EXECUTE="True"'
 				}
 			}
-			stage('Two') {
-				steps { sh 'echo "Step dos"'
+			when { $(EXECUTE) == "True" }
+			steps {
+				stage('Second') {
+					steps { sh 'echo "updating second stage"'
+					}
 				}
 			} 
-			stage('Three') {
+			stage('Third') {
 				steps { sh 'echo "Step Three"'
 				}
 			}
