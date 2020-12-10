@@ -6,7 +6,7 @@ pipeline {
 			
 			stage('First') {
 				steps {
-					env EXECUTE="True"
+					sh 'echo "prueba"'
 				 }
 			}
 			
