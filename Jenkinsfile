@@ -2,7 +2,7 @@ pipeline {
 	agent any
 		stages {
 			stage('First') {
-				steps { sh 'env.EXECUTE="True"'
+				steps { sh ' env EXECUTE="True" '
 				}
 			}
 			stage('Second') {
