@@ -6,7 +6,7 @@ pipeline {
 				}
 			}
 			stage('Two') {
-				steps { sh 'echo "Step Two"'
+				steps { sh 'echo "Step dos"'
 				}
 			} 
 			stage('Three') {
