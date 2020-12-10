@@ -15,7 +15,6 @@ pipeline {
 			stage('Second') {
 				steps { 
 					sh 'echo "updating second stage"'
-					sh 'echo "EXECUTE = ${env.EXECUTE}"'
 				}
 			}
 			     			
