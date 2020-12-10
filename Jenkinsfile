@@ -5,8 +5,9 @@ pipeline {
 			
 			
 			stage('First') {
-				steps { sh ' env EXECUTE="True" '
-				}
+				environment {
+                			EXECUTE = "True"
+            			}
 			}
 			
 
@@ -14,7 +15,7 @@ pipeline {
 			stage('Second') {
 				steps { 
 					sh 'echo "updating second stage"'
-					sh 'echo $EXECUTE'
+					sh 'echo "EXECUTE = ${env.EXECUTE}"'
 				}
 			}
 			     			
