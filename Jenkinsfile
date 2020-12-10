@@ -5,9 +5,11 @@ pipeline {
 			
 			
 			stage('First') {
-				environment {
-                			EXECUTE = "True"
-            			}
+				steps {
+					environment {
+						EXECUTE = "True"
+					}
+				 }
 			}
 			
 
